@@ -22,7 +22,7 @@ class Rhino_Processing
     {
         frame_no = 0;
         is_Running = true;
-        RhinoApp.EscapeKeyPressed += Abort;
+        RhinoApp.EscapeKeyPressed += Exit;
     }
 
     public void Run(RhinoDoc _doc, bool refresh = true)
@@ -45,7 +45,7 @@ class Rhino_Processing
 
         Button stop_button = new Button();
         stop_button.Content = "stop";
-        stop_button.Click += Abort;
+        stop_button.Click += Exit;
 
         stack_panel.Children.Add(stop_button);
         window.Content = stack_panel;
@@ -56,7 +56,7 @@ class Rhino_Processing
         // iteration starts here
         DateTime time_start = DateTime.Now;
 
-        Setup(); // frame_no
+        Setup(); 
 
         while (is_Running)
         {
@@ -110,7 +110,7 @@ class Rhino_Processing
 
     }
 
-    public void Abort(object sender, EventArgs e)
+    public void Exit(object sender, EventArgs e)
     {
 
         is_Running = false;
