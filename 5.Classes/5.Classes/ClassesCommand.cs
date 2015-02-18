@@ -6,12 +6,12 @@ using Rhino.Geometry;
 using Rhino.Input;
 using Rhino.Input.Custom;
 
-namespace Rhino_Loop
+namespace _5.Classes
 {
-    [System.Runtime.InteropServices.Guid("8b95fc2e-b907-47d6-9aba-e4b0c95aabdf")]
-    public class RhinoLoop : Command
+    [System.Runtime.InteropServices.Guid("c2e383a3-9299-4b20-9abf-84f498c74fd3")]
+    public class ClassesCommand : Command
     {
-        public RhinoLoop()
+        public ClassesCommand()
         {
             // Rhino only creates one instance of each command class defined in a
             // plug-in, so it is safe to store a refence in a static property.
@@ -19,7 +19,7 @@ namespace Rhino_Loop
         }
 
         ///<summary>The only instance of this command.</summary>
-        public static RhinoLoop Instance
+        public static ClassesCommand Instance
         {
             get;
             private set;
@@ -28,14 +28,13 @@ namespace Rhino_Loop
         ///<returns>The command name as it appears on the Rhino command line.</returns>
         public override string EnglishName
         {
-            get { return "RhinoLoop"; }
+            get { return "ClassesCommand"; }
         }
 
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
         {
-            Loop loop = new Loop(); // あたらしいループを作ります。
-
-            loop.Run(doc); // 実行!
+            Loop loop = new Loop();
+            loop.Run(doc);
 
             return Result.Success;
         }

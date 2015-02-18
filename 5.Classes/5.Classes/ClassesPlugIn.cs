@@ -1,4 +1,4 @@
-﻿namespace Rhino_Loop
+﻿namespace _5.Classes
 {
     ///<summary>
     /// <para>Every RhinoCommon .rhp assembly must have one and only one PlugIn-derived
@@ -8,15 +8,15 @@
     /// attributes in AssemblyInfo.cs (you might need to click "Project" ->
     /// "Show All Files" to see it in the "Solution Explorer" window).</para>
     ///</summary>
-    public class RhinoLoopPlugIn : Rhino.PlugIns.PlugIn
+    public class ClassesPlugIn : Rhino.PlugIns.PlugIn
     {
-        public RhinoLoopPlugIn()
+        public ClassesPlugIn()
         {
             Instance = this;
         }
 
-        ///<summary>Gets the only instance of the RhinoLoopPlugIn plug-in.</summary>
-        public static RhinoLoopPlugIn Instance
+        ///<summary>Gets the only instance of the ClassesPlugIn plug-in.</summary>
+        public static ClassesPlugIn Instance
         {
             get;
             private set;
