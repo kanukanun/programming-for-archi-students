@@ -27,9 +27,9 @@ namespace _5.Classes
                 {
                     circ.Add(new Circle(new Point3d(i, j, 0), rnd.GetValue(xoff, yoff, 0) * -1));
                     //RhinoApp.WriteLine(String.Format("{0}", circ[j].Radius));
-                    yoff += 0.01;
+                    yoff += 0.1;
                 }
-                xoff += 0.1;
+                xoff += 0.01;
             }
         }
         
