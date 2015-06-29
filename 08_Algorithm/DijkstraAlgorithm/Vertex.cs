@@ -40,7 +40,7 @@ namespace _5.Classes
             int _id,
             int _num_child,
             Random _rnd,
-            int[] _edge_id,
+            int[] _id_child,
             double[] _dis_child,
             double _cost,
             int _parent_id,
@@ -53,7 +53,7 @@ namespace _5.Classes
             id = _id;
             num_child = _num_child;
             rnd = _rnd;
-            id_child = _edge_id;
+            id_child = _id_child;
             dis_child = _dis_child;
             cost = _cost;
             parent_id = _parent_id;
