@@ -86,7 +86,6 @@ namespace _5.Classes
                 cst.AddLine(vertex[a].DrawShortest(vertex), Color.Red);
                 b = vertex[a].ReturnParentId(b);
                 a = b;
-                RhinoApp.WriteLine(String.Format("{0}", 0));
             }
 
             //スタートとゴールのカラーを変更
