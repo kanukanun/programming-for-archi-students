@@ -22,7 +22,7 @@ namespace _5.Classes
             Perlin rnd = new Perlin();
             for (int i = 0; i < 100; i++)
             {
-                double yoff = 0;
+                double yoff = 100;
                 for (int j = 0; j <100; j++)
                 {
                     circ.Add(new Circle(new Point3d(i, j, 0), rnd.GetValue(xoff, yoff, 0) * -1));
