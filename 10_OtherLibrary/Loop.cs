@@ -29,7 +29,7 @@ namespace _5.Classes
                     //RhinoApp.WriteLine(String.Format("{0}", circ[j].Radius));
                     yoff += 0.01;
                 }
-                xoff += 0.01;
+                xoff += 0.1;
             }
         }
         
