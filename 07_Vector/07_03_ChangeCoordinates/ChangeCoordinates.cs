@@ -11,7 +11,7 @@ using Rhino.Display;
 
 namespace _5.Classes
 {
-    class BoxProject
+    class ChangeCoordinates
     {
         ////////////// 
         //properties// 
@@ -257,7 +257,7 @@ namespace _5.Classes
                 vertex_rec.Add(CoordinateTransformation(pos_viewcorner[i]));
             }
 
-            //面積を求めるために各点から３つ選択してできる三角形をすべて求める。
+            //面積を求めるために各点から３つ選択してできる三角形をすべて求める
             for (int i = 0; i < clientpos.Count - 2; i++)
             {
                 vertex.Clear();
