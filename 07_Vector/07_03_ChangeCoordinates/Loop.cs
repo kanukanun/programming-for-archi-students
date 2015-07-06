@@ -17,7 +17,7 @@ namespace _5.Classes
         {
             RhinoView view;
             RhinoGet.GetView("select viewport", out view);//ビューポートを選択し設定を格納
-            objs = new BoxProject(100 , view);//今回対象とするオブジェクト
+            objs = new ChangeCoordinates(100 , view);//今回対象とするオブジェクト
 
             objs.MakeBox();
             objs.Area();
