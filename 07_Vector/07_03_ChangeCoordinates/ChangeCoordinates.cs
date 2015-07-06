@@ -35,7 +35,7 @@ namespace _5.Classes
 　      //////////////// 
 
 
-        public BoxProject(
+        public ChangeCoordinates(
             int _size,
             RhinoView _view
         )
