@@ -26,7 +26,7 @@ namespace json_dynamicjson01
         {
             var url = "http://statdb.nstac.go.jp/api/1.0b/app/json/getStatsData?appId=";
 
-            var appId = "c4027947d9d064ddbc034e3520f0a95d2935ade5";  // 自分のアプリケーション ID を貼り付けて下さい。
+            var appId = "xxxxxxxxxxxxxxxxxx";  // 自分のアプリケーション ID を貼り付けて下さい。
             var statsDataId = "&statsDataId=" + "0003104197";
 
             var cdCat01 = "&cdCat01=" + "000";
