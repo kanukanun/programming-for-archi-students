@@ -98,7 +98,7 @@ namespace _5.Classes
                     sum_radius = radius + astroobjs[i].radius;　//自分と対象の惑星の半径の合計
                     Distance = position.DistanceTo(astroobjs[i].position);　//自分と相手との中心間の距離
 
-                    if (a> Distance)
+                    if (sum_radius > Distance)
                     {
                         if (frame_no < 200)//開始時は惑星が重なっているためある程度回転してから行う
                         {
