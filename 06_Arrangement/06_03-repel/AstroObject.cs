@@ -85,7 +85,7 @@ namespace _5.Classes
 
         public void Repel(List<AstroObject> astroobjs)
         {
-            double a = 0;
+            double sum_radius = 0;
             double Distance = 0;
             for (int i = 0; i < astroobjs.Count; i++)
             {
@@ -95,7 +95,7 @@ namespace _5.Classes
                 }
                 else
                 {
-                    a = radius + astroobjs[i].radius;　//自分と対象の惑星の半径の合計
+                    sum_radius = radius + astroobjs[i].radius;　//自分と対象の惑星の半径の合計
                     Distance = position.DistanceTo(astroobjs[i].position);　//自分と相手との中心間の距離
 
                     if (a> Distance)
