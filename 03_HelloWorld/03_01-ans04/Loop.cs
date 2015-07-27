@@ -13,7 +13,7 @@ namespace _03_01_template
         Point3d earth;  // 型 変数名;
         Point3d moon;   // 型 変数名;
         double distance = 10.0; //型 変数名（地球の公転半径） = 数値（固定）
-        double DistanceBetweenMoonAndEarth = 10.0 + 2;      //型 変数名（地球と月の距離） = 数値（固定））
+        double DistanceBetweenMoonAndEarth = distance + 2;      //型 変数名（地球と月の距離） = 数値（固定））
         double A = 13.4;    //　（地球の公転周期）÷（月の交点周期）
 
         public override void Setup()    //Setup関数
