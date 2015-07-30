@@ -21,7 +21,7 @@ namespace _03_01_template
 
         public override void Draw()
         {
-            double distance = 10.0;
+            double distance = 10.0;     //原点からの距離
             
             earth.X = Math.Cos(frame_no / 180.0 * Math.PI) * distance;
             earth.Y = Math.Sin(frame_no / 180.0 * Math.PI) * distance;
