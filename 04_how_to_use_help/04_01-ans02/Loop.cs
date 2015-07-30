@@ -17,7 +17,7 @@ namespace _04_01_template
         public override void Setup()
         {
             earth = new Point3d(0.0, 12.0, 0.0);    //変数名 = new 型
-            origin = new Point3d(0, 0, 0);
+            origin = new Point3d(0, 0, 0);          //原点を追加
             x = new Line(earth, origin);    //x(変数) = new Line(型)(始点,終点);
         }
 
