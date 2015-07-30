@@ -13,7 +13,7 @@ namespace _03_01_template
         Point3d earth;  //型 変数名
         Point3d moon;   //上記earthと同様です
         
-        double distance = 10.0;
+        double distance = 10.0;     //Draw関数の外に出したことで、クラス内の他の関数から参照可能
 
         public override void Setup()
         {
