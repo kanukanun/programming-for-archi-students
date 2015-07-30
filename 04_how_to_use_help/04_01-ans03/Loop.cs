@@ -10,7 +10,7 @@ namespace _04_01_template
 {
     class Loop : Rhino_Processing
     {
-        Sphere earth;
+        Sphere earth;   //Sphereを追加
         Sphere moon;
         Point3d earth_center;
         Point3d moon_center;
