@@ -13,6 +13,7 @@ namespace _05_02_01_AstroObject
         //////////////
         //properties//
         //////////////
+        
         private int id;
         private string name;
         private double radius;
@@ -26,6 +27,7 @@ namespace _05_02_01_AstroObject
         /////////////////
         //constructors//
         ////////////////
+        
         public AstroObject(
             int _id,
             string _name,
@@ -49,6 +51,7 @@ namespace _05_02_01_AstroObject
         ///////////
         //methods//
         ///////////
+        
         public void Rotate()
         {
             double X = rotation_origin.X + Math.Cos(frame_no / rotation_days * Math.PI + 90) * rotation_radius;
