@@ -13,6 +13,7 @@ namespace _05_04_01_AstroObject
         //////////////
         //properties//
         //////////////
+        
         private int id;
         private string name;
         private double radius;
@@ -23,9 +24,10 @@ namespace _05_04_01_AstroObject
         private Point3d position;
         private Sphere obj;
 
-        /////////////////
+        ////////////////
         //constructors//
         ////////////////
+        
         public AstroObject(
            int _id,
            string _name,
@@ -49,6 +51,7 @@ namespace _05_04_01_AstroObject
         ///////////
         //methods//
         ///////////
+        
         public void Rotate()
         {
             double X = rotation_origin.X + Math.Cos(frame_no / rotation_days * Math.PI + 90) * rotation_radius;
@@ -73,11 +76,13 @@ namespace _05_04_01_AstroObject
             rotation_origin = _center;
         }
 
+        //nameをコンソールに表示
         public void PrintName()
         {
             RhinoApp.WriteLine(name);
         }
 
+        //桁を0埋めで揃えて返す
         public String FormatInteger(int a)
         {
             string s = String.Format("{0:D4}", a);
