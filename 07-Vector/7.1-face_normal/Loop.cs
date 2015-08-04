@@ -14,6 +14,7 @@ namespace _5.Classes
 
         public override void Setup()
         {
+            //高さ80,幅360のBrickのインスタンスを30個生成
             for (int i = 0; i < 30; i++)
             {
                 brick.Add(new Brick(i , 80 , 360));
@@ -23,6 +24,7 @@ namespace _5.Classes
 
         public override void Draw()
         {
+            //一番目のSurfaceを生成
             brick[0].MakeStartSrf();
 
             for (int i = 1; i < brick.Count; i++)
