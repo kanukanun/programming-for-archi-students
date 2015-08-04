@@ -14,6 +14,7 @@ namespace _05_02_01_AstroObject
 
         public override void Setup()
         {
+            //デフォルメしていますが惑星を追加しました
             venus = new AstroObject(0, "venus", 60.51, new Point3d(), 1082.0, 224.4);
             earth = new AstroObject(1, "earth", 63.71, new Point3d(), 1496.0, 365.4);
             moon = new AstroObject(2, "moon", 17.37, earth.Center(), 384.0, 27.32);
