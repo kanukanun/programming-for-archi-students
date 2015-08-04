@@ -13,12 +13,10 @@ namespace _5.Classes
         List<AstroObject> astroobjs = new List<AstroObject>();
 
         public override void Setup() // this runs once in the beginning.
-
-
         {
             int a = 0;
             int b = 1;
-            //２つの基準となる惑星を生成する。
+            //基準となる惑星を生成する。
             astroobjs.Add(new AstroObject(0, a, AstroObject.max_radius, new Point3d(0, 0, 0), 1496.0, 365.4));
             astroobjs.Add(new AstroObject(1, b, AstroObject.min_radius, new Point3d(0, 0, 0), 1496.0, 200.4));
 
