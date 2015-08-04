@@ -83,6 +83,7 @@ namespace _5.Classes
             _doc.Objects.AddSphere(obj);
         }
 
+        //衝突時に公転方向を反転
         public void Repel(List<AstroObject> astroobjs)
         {
             double sum_radius = 0;
@@ -91,18 +92,15 @@ namespace _5.Classes
             {
                 if (id == astroobjs[i].id)　//計測対象から自分を外す
                 {
-
                 }
                 else
                 {
                     sum_radius = radius + astroobjs[i].radius;　//自分と対象の惑星の半径の合計
                     Distance = position.DistanceTo(astroobjs[i].position);　//自分と相手との中心間の距離
-
                     if (sum_radius > Distance)
                     {
                         if (frame_no < 200)//開始時は惑星が重なっているためある程度回転してから行う
                         {
-
                         }
                         else
                         {
@@ -114,7 +112,6 @@ namespace _5.Classes
                     }
                     else
                     {
-
                     }
                 }
             }
