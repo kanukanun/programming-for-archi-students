@@ -57,7 +57,8 @@ namespace _5.Classes
 
         public void Rotate()
         {
-            passed_days += 1;
+            passed_days += 1;   //1フレーム毎にインクリメント
+            //経過日数 = 衝突した日 + 回転方向 + 衝突した日からの経過日数
             days = collision_days + direction * passed_days;
 
             double X = rotation_origin.X + Math.Cos(days / rotation_days * Math.PI + 90) * rotation_radius;
@@ -103,7 +104,7 @@ namespace _5.Classes
             }
         }
 
-        //プログラム開始時に重なっているオブジェクトがあったら時間を進める。
+        //プログラム開始時に重なっているオブジェクトがあったらに数を進める
         public void Explosion(List<AstroObject> astroobjs)
         {
             double sum_radius = 0;
