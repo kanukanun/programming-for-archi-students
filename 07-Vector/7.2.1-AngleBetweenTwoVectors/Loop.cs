@@ -12,6 +12,7 @@ namespace _5.Classes
     {
         CrvonSrf cos;
 
+        //一度処理を行えればいいので、Setup関数に記述した
         public override void Setup()
         {
             cos = new CrvonSrf(10, 300, 300);
