@@ -11,12 +11,20 @@ namespace _5.Classes
 {
     class CrvonSrf
     {
-        private int number;
-        private int width;
-        private int height;
+        //////////////
+        //properties//
+        //////////////
+        
+        private int number; //コントロールポイントの個数
+        private int width;  //曲線を作る範囲を決める
+        private int height; //widthはx方向、heightはy方向
         private List<Point3d> pop = new List<Point3d>();
         private Curve crv;
 
+        ////////////////
+        //constructors//
+        ////////////////
+        
         public CrvonSrf(
             int _number,
             int _width,
@@ -29,6 +37,11 @@ namespace _5.Classes
             height = _height; 
         }
 
+        ///////////
+        //methods//
+        ///////////
+        
+        //ランダムに点を作る
         public void MakePoint()
         {
             Random rnd = new Random();
@@ -41,29 +54,35 @@ namespace _5.Classes
             }
         }
 
+        //点をコントロールポイントとして曲線を作る
         public void CreateCrv()
         {
             crv = Curve.CreateInterpolatedCurve(pop, 3);
         }
 
+        //曲線上の任意の2点の接戦ベクトルを用い法線ベクトルを求める
         private Vector3d NormalVector(double t1 , double t2)
         {
             double ax, ay, az, bx, by, bz;
             Vector3d normvec , v1, v2;
+            //任意の点における接戦ベクトルを求める
             v1 = crv.CurvatureAt(t1);
             v2 = crv.CurvatureAt(t2);
 
+            //ベクトルをx,y,zに分解
             ax = v1.X;
             ay = v1.Y;
             az = v1.Z;
             bx = v2.X;
             by = v2.Y;
             bz = v2.Z;
-
+            
+            //法線ベクトルを求める
             normvec = new Vector3d(ay * bz - az * by, az * bx - ax * bz, ax * by - ay * bx);
             return normvec;
         }
 
+        //曲線が平面上にあるか判定
         public void DecideCoplanar()
         {
             double cx, cy, cz, dx, dy, dz , angle;
@@ -78,10 +97,12 @@ namespace _5.Classes
             dy = nv2.Y;
             dz = nv2.Z;
 
+            //内積を用いて2つの法線ベクトルの角度を求める
             angle = Math.Acos((cx * dx + cy * dy + cz * dz) / (nv1.Length * nv2.Length));
 
             RhinoApp.WriteLine(String.Format("{0}", angle));
-
+            
+            //角度が0度の場合、曲線が同一平面上にあるとする
             if(angle == 0 || angle == Math.PI)
             {
                 RhinoApp.WriteLine("curve is coplanar");
